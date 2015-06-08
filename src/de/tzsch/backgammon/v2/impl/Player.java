@@ -25,8 +25,9 @@ public class Player implements iPlayer{
     }
 
     @Override
-    public void setName() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public void setName(String name) {
+        assert name.length() > 0 : "Invalid name";
+        this.displayName = name;
     }
 
     @Override
@@ -45,7 +46,7 @@ public class Player implements iPlayer{
     }
 
     @Override
-    public void setColor(iColor color) {
+    public void setColor(iColor.colorValue color) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 

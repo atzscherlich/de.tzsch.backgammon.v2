@@ -34,6 +34,22 @@ public class Game implements iGame{
         }
         try {
             players = new Player[2];
+            
+            iPlayer p = new Player();
+            p.setName("Player 1");
+            p.setColor(PlayerColor.colorValue.LIGHT);
+            p.enableAI(true);
+            
+            players[0] = p;
+            
+            p.setName("Player 2");
+            p.setColor(PlayerColor.colorValue.LIGHT);
+            p.enableAI(true);
+            
+            players[1] = p;
+            
+            assert players[0].getName() != players[1].getName() : "Player names must be different";
+            assert players[0].getColor()!= players[1].getColor(): "Player colors must be different";
         }
         catch (Exception e)
         {

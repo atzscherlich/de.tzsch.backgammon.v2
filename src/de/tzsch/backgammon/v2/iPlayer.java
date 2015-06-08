@@ -12,11 +12,11 @@ package de.tzsch.backgammon.v2;
 public interface iPlayer {
     
     public String getName();
-    public void setName();
+    public void setName(String name);
     public boolean aiEnabled();
     public void enableAI(boolean enable);
     public iColor getColor();
-    public void setColor(iColor color);
+    public void setColor(iColor.colorValue color);
     public boolean isActive();
     public void play();
 }
